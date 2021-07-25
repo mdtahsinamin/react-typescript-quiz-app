@@ -84,13 +84,11 @@ const App = () => {
 
         {loading && (
           <InnerDiv>
-            <a href="https://imgur.com/hXciEg2">
-              <img
-                src="https://i.imgur.com/hXciEg2.gif"
-                title="source: imgur.com"
-                alt=" Loading"
-              />
-            </a>
+            <img
+              src="https://i.imgur.com/hXciEg2.gif"
+              title="source: imgur.com"
+              alt=" Loading"
+            />
           </InnerDiv>
         )}
 
