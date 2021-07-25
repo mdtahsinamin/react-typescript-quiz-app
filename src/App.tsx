@@ -84,7 +84,7 @@ const App = () => {
             start
           </button>
         ) : null}
-        {!gameOver ? <p className="score">Score:{score}</p> : null}
+        {!gameOver ? <div className="score">Score:{score}</div> : null}
 
         {loading && <img src="./images/fidget-spinner.gif" alt="Loading..." />}
 
