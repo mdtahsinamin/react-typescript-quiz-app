@@ -65,3 +65,12 @@ export const Wrapper = styled.div`
     max-width: 200px;
   }
 `;
+
+export const InnerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    width: 150px;
+  }
+`;

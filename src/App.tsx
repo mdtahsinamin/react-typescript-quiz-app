@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import { Difficulty, fetchQuiz, QuestionState } from "./API";
-import { GlobalStyle, Wrapper } from "./App.styles";
+import { GlobalStyle, InnerDiv, Wrapper } from "./App.styles";
 import QuestionCard from "./components/QuestionCard";
-
 const TOTAL_QUESTIONS = 10;
 const CATEGORY_NUMBER = 18;
-
 export type AnswerObject = {
   question: string;
   answer: string;
@@ -20,8 +18,6 @@ const App = () => {
   const [userAnswers, setUserAnswers] = useState<AnswerObject[]>([]);
   const [score, setScore] = useState(0);
   const [gameOver, setGameOver] = useState(true);
-
-  //console.log(fetchQuiz(TOTAL_QUESTIONS, CATEGORY_NUMBER, Difficulty.MEDIUM));
 
   const startQuiz = async () => {
     setLoading(true);
@@ -86,7 +82,17 @@ const App = () => {
         ) : null}
         {!gameOver ? <div className="score">Score:{score}</div> : null}
 
-        {loading && <img src="./images/fidget-spinner.gif" alt="Loading..." />}
+        {loading && (
+          <InnerDiv>
+            <a href="https://imgur.com/hXciEg2">
+              <img
+                src="https://i.imgur.com/hXciEg2.gif"
+                title="source: imgur.com"
+                alt=" Loading"
+              />
+            </a>
+          </InnerDiv>
+        )}
 
         {!loading && !gameOver && (
           <QuestionCard
